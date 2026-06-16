@@ -6,6 +6,17 @@
         <h2>{{ $session->name }}</h2>
         <p class="text-muted">{{ $session->exam->title ?? '-' }} · {{ $session->start_time->format('d M Y H:i') }} - {{ $session->end_time->format('H:i') }}</p>
     </div>
+    <div class="btn-group">
+        <a href="{{ route('admin.sessions.kartu', $session) }}" target="_blank" class="btn btn-outline-primary">
+            <i class="bi bi-person-badge"></i> Kartu Ujian
+        </a>
+        <a href="{{ route('admin.sessions.kartu.bulk', $session) }}" target="_blank" class="btn btn-outline-primary">
+            <i class="bi bi-card-text"></i> Kartu (4/Hal)
+        </a>
+        <a href="{{ route('admin.sessions.daftar-hadir', $session) }}" target="_blank" class="btn btn-outline-success">
+            <i class="bi bi-list-check"></i> Daftar Hadir
+        </a>
+    </div>
 </div>
 
 <div class="row g-3">
