@@ -52,6 +52,11 @@
                         <i class="bi bi-pencil-square me-2"></i> Koreksi
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.analysis.index') }}" class="nav-link text-white {{ request()->routeIs('admin.analysis.*') ? 'active bg-primary' : '' }}">
+                        <i class="bi bi-bar-chart-line me-2"></i> Analisis Soal
+                    </a>
+                </li>
             </ul>
             <hr>
             <div class="dropdown">
